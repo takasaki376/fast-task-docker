@@ -42,4 +42,4 @@ https://www.sria.co.jp/blog/2021/06/5557/
 
 # テスト実行
 
-`$ docker-compose exec demo-app poetry run python -m tests.test_main`
+`$ docker-compose exec demo-app poetry run Pytest tests`
