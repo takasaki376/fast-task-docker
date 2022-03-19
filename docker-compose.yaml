@@ -25,7 +25,7 @@ services:
     platform: linux/x86_64 # M1 Macの場合必要
     container_name: db
     ports:
-      - "1234:1234"
+      - "5432:5432"
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: qin

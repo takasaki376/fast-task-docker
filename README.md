@@ -59,7 +59,9 @@ https://www.sria.co.jp/blog/2021/06/5557/
 ```
 docker-compose run --entrypoint "poetry add asyncpg alembic python-dotenv" demo-app
 docker-compose run --entrypoint "poetry remove aiomysql" demo-app
-
+docker-compose run --entrypoint "poetry add psycopg2" demo-app
+# リビルド
+docker-compose build --no-cache
 ```
 
 ## デプロイ
