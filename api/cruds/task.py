@@ -20,7 +20,6 @@ async def get_tasks_with_done(db: AsyncSession) -> List[Tuple[int, str, bool]]:
     # 全てのレコードを取得する
     return result.all()
 
-
 async def create_task(
     db: AsyncSession, task_create: task_schema.TaskCreate
 ) -> task_model.Task:

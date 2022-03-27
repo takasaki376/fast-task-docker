@@ -1,9 +1,15 @@
 from sqlalchemy import create_engine
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 from api.db import Base
 from api.models.task import Task, Done
 
-DB_URL = "mysql+pymysql://root@db:3306/demo?charset=utf8"
+# DB_URL = "mysql+pymysql://root@db:3306/demo?charset=utf8"
+DB_URL = os.environ['DATABASE_URL']
+DB_URL = DB_URL.replace('postgresql', 'postgresql+psycopg2')
+
 engine = create_engine(DB_URL, echo=True)
 
 
